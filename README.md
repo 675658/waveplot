@@ -1,6 +1,8 @@
 # waveplot
 这个类是matplotlib.pyplot的一个封装,用于在多线程下绘制动态图形
+
 示例:
+
 ```python
 from waveplot import *
 import time
