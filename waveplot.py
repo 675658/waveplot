@@ -23,6 +23,9 @@ class waveplot:
             self.x.append([])
             self.y.append([])
 
+    def flush(self):
+        self.__semaphore.release()
+        
     def show(self):
         while True:
             self.__semaphore.acquire()
@@ -42,4 +45,3 @@ class waveplot:
         else:
             self.x[subgraph-1]=self.x[subgraph-1][len(x):len(self.x[subgraph-1])]+x
             self.y[subgraph-1]=self.y[subgraph-1][len(y):len(self.y[subgraph-1])]+y
-        self.__semaphore.release()
