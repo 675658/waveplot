@@ -18,6 +18,7 @@ def a():    # 模拟mqtt接收函数
     while True:
         waveplt.plot(x=[t],y=[math.sin(t)],subgraph=1)  # 绘图 x=[t] y=[sin(t)] 子图1
         waveplt.plot(x=[t],y=[math.cos(t)],subgraph=2)  # 绘图 x=[t] y=[cos(t)] 子图2
+        waveplt.flush()                                 # 刷新图像
         t=t+0.1
         time.sleep(0.1)
 
